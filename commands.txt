@@ -1,0 +1,14 @@
+# Run a comprehensive backtest with all components
+python main.py --mode backtest --component-tests --monte-carlo --stress-tests --cross-validation
+
+# Run a specific component test (e.g., Markov Chain analysis)
+python main.py --mode backtest --component markov_chain --period 1_year
+
+# Run a backtest for specific symbols and timeframes
+python main.py --mode backtest --symbols BTCUSDT,ETHUSDT --timeframes 5m,15m
+
+# Start live trading with default parameters from config
+python main.py --mode live
+
+# Start live trading with specific symbols
+python main.py --mode live --symbols BTCUSDT,ETHUSDT
